@@ -95,3 +95,7 @@ Optimization effects are sorted from noticeable to none
 ### More Server
 - [Glowstone](https://glowstone.net/#downloads)
 - [Gale](https://github.com/GaleMC/Gale)
+
+
+## Optimize the server properties file
+https://github.com/YouHaveTrouble/minecraft-optimization

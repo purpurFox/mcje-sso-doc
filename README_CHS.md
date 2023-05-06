@@ -4,15 +4,15 @@
 ###### [广告位招租]
 
 
-这是一份专门为Minecraft服主们开放的Minecraft服务器“软优化”指南。**请注意：这份指南不提供硬件优化，而是提供尽可能多的软件优化！**
+这是一份专门为Minecraft服主们开放的Minecraft服务器“软优化”指南，**仅供参考**。**请注意：这份指南不提供硬件优化，而是提供尽可能多的软件优化！**
 
 ## 目录
 [TOC]
 
 
 ## 给服务器选择一个操作系统
-一般情况下，Windows的运行效率低于Linux
-如果你非常追求高的运行效率而且不嫌麻烦，Linux是你的不二选择，前提是你有一定的Linux基础
+*一般情况下*，Windows的运行效率低于Linux
+如果你非常追求高的运行效率而且不嫌麻烦，Linux是你的不二选择，**前提是你有一定的Linux基础**
 但是如果你嫌Linux麻烦，Windows也不是不行，因为这只是优化指南其中的一条 :)
 
 ### Linux系（运行效率推荐）
@@ -44,7 +44,7 @@
 - [Azul Zulu （次选）](https://www.azul.com/downloads)
 - [Adoptium Eclipse Temurin](https://adoptium.net/temurin/releases)
 - [BellSoft Liberica JDK](https://bell-sw.com/pages/downloads)
-- [Alibaba Dragonwell](https://dragonwell-jdk.io)
+- [Amazon Corretto](https://aws.amazon.com/en/corretto)
 - [*WhichJDK?*](https://whichjdk.com)
 
 如果你选择的是GraalVM，那么你会在以下的“Java参数”中能够激活更多的参数
@@ -99,3 +99,51 @@ java -Xmx8192M -Dfile.encoding=UTF-8 -XX:+UseCompressedOops -XX:+UnlockExperimen
 
 ## 优化服务端属性文件
 https://github.com/YouHaveTrouble/minecraft-optimization
+
+
+# 附：生电向配置
+**spigot.yml**
+```yaml
+# 用漏斗矿车的挂机机器
+entity-activation-range:
+  misc:0
+# 世界吞噬器
+max-tnt-per-tick: 1000
+```
+
+**paper-global.yml**
+```yaml
+# 连点器
+max-packet-rate: 5000.0
+# 无头活塞
+allow-headless-pistons: true
+# 无敌水晶
+allow-permanent-block-break-exploits: true
+# 破坏无法被正常破坏的方块
+allow-piston-duplication: true
+```
+
+**paper-world-defaults.yml**
+```yaml
+# 关闭卸载区块的延迟
+delay-chunk-unloads-by: 0s
+# 伪和平
+count-all-mobs-for-spawning: true
+# 同上，可能会降低刷怪塔效率
+per-player-mob-spawns: false
+# 村民打骨折
+fix-curing-zombie-villager-discount-exploit: false
+# 减少出生点加载范围
+keep-spawn-loaded-range: 3
+```
+
+**purpur.yml**
+```yaml
+# 解除传送限制
+safe-teleporting: false
+# 虚空交易
+allow-void-trading: true
+# 刷沙机
+sand:
+  fix-duping: false
+```

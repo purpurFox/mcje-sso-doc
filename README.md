@@ -11,8 +11,8 @@ This is a Minecraft server "soft optimization" guide for Minecraft server owners
 
 
 ## Choose an Operating System for the server
-In general, Windows runs less efficiently than Linux
-If you are very pursuing high operating efficiency and don't bother, Linux is your best choice, provided you have a certain Linux foundation
+*In general*, Windows runs less efficiently than Linux
+If you are very pursuing high operating efficiency and don't bother, Linux is your best choice, **provided you have a certain Linux foundation**
 But if you think Linux is troublesome, Windows is not bad, because this is just one of the optimization guidelines :)
 
 ### Linux OS (recommended for operating efficiency)
@@ -44,7 +44,7 @@ For more stable optimization, please use the "Community Edition" ; For more aggr
 - [Azul Zulu (second choice)](https://www.azul.com/downloads)
 - [Adoptium Eclipse Temurin](https://adoptium.net/temurin/releases)
 - [BellSoft Liberica JDK](https://bell-sw.com/pages/downloads)
-- [Alibaba Dragonwell](https://dragonwell-jdk.io)
+- [Amazon Corretto](https://aws.amazon.com/en/corretto)
 - [*WhichJDK?*](https://whichjdk.com)
 
 If you choose GraalVM, then you will be able to activate more parameters in the following "Java Parameters"
@@ -99,3 +99,37 @@ Optimization effects are sorted from noticeable to none
 
 ## Optimize the server properties file
 https://github.com/YouHaveTrouble/minecraft-optimization
+
+
+# Attachment: Feature-oriented configuration
+**spigot.yml**
+```yaml
+entity-activation-range:
+  misc:0
+max-tnt-per-tick: 1000
+```
+
+**paper-global.yml**
+```yaml
+max-packet-rate: 5000.0
+allow-headless-pistons: true
+allow-permanent-block-break-exploits: true
+allow-piston-duplication: true
+```
+
+**paper-world-defaults.yml**
+```yaml
+delay-chunk-unloads-by: 0s
+count-all-mobs-for-spawning: true
+per-player-mob-spawns: false
+fix-curing-zombie-villager-discount-exploit: false
+keep-spawn-loaded-range: 3
+```
+
+**purpur.yml**
+```yaml
+safe-teleporting: false
+allow-void-trading: true
+sand:
+  fix-duping: false
+```

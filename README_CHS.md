@@ -95,3 +95,7 @@ java -Xmx8192M -Dfile.encoding=UTF-8 -XX:+UseCompressedOops -XX:+UnlockExperimen
 ### 更多服务端
 - [Glowstone](https://glowstone.net/#downloads)
 - [Gale](https://github.com/GaleMC/Gale)
+
+
+## 优化服务端属性文件
+https://github.com/YouHaveTrouble/minecraft-optimization

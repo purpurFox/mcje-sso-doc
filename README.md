@@ -4,7 +4,7 @@
 ###### *This is an English translation of the original Chinese page*
 
 
-This is a Minecraft server "soft optimization" guide for Minecraft server owners. **PLEASE NOTE: This guide DOES NOT provide hardware optimization, but provides as many software optimizations as possible!**
+This is a Minecraft server "soft optimization" guide for Minecraft server owners, **for reference only**. **PLEASE NOTE: This guide DOES NOT provide hardware optimization, but provides as many software optimizations as possible!**
 
 ## Table of Contents
 [TOC]

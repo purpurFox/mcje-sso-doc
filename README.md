@@ -34,7 +34,7 @@ If you choose Ubuntu/Debian or other Debian-based, congratulations! You can get 
 ## Choose a Java Runtime Environment (JDK is recommended)
 
 ### The Minecraft version corresponds to the Java version
-1.17 and above use 17 and above, 1.16.5~1.13 use 17~8, 1.12.2 and below use 8
+1.17 and above use 17 and above, 1.16.5-1.13 use 17-8, 1.12.2 and below use 8
 
 ### Choose a Java distribution
 Replacing the Java distribution is also a way of optimization
